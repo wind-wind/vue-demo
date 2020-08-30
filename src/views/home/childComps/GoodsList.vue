@@ -1,0 +1,30 @@
+<template>
+  <grid-view>
+    <goods-list-item v-for="(item, index) in list" :key="index" :goods="item"></goods-list-item>
+  </grid-view>
+</template>
+
+<script>
+import GridView from 'components/common/gridview/GridView'
+import GoodsListItem from './GoodsListItem'
+
+export default {
+  name: 'GoodsList',
+  components: {
+    GridView,
+    GoodsListItem
+  },
+  props: {
+    list: {
+      type: Array,
+      default() {
+        return []
+      }
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>
